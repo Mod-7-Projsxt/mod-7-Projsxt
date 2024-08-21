@@ -1,10 +1,10 @@
 # GeoSphere
 
-Created by Fiona, and Veshona
+Created by Fiona & Veshona
 
 ## 🚀 Mission statement
 
-Our application,  is for people who want to see the country flags. It allows users to see the country names, flags, population, overall information for each country
+Our application,  is for people who want to see the country flags and information. It allows users to see the country names, flags, population, overall information for each country and upon clicking on the card the google map links will show up
 
 ## API & React Router
 
@@ -15,20 +15,19 @@ This application will use the REST Countries API. Below are the documentation an
 - [API endpoint #1](https://restcountries.com/v3.1/all)
 (https://restcountries.com/v3.1/all)
   - All of the information
-  - List of data values used by the endpoint
+  - name, captial, language, currency, region
   ___
-- [API endpoint #2](https://restcountries.com/v3.1/all?fields=name,capital,continents,currencies)
+- [API endpoint #2](https://restcountries.com/v3.1/all?fields=maps)
 
-(https://restcountries.com/v3.1/all?fields=name,capital,continents,currencies)
-  - This will fetch the `name`, `capital`,`continents`,`currencies`
-  - `name`, `capital`,`continents`,`currencies`
+(https://restcountries.com/v3.1/all?fields=maps)
+  - This will fetch the google map link, includes openStreetMap as well
+  - `googleMaps`
   ___
 - [API endpoint #3](https://restcountries.com/v3.1/all?fields=flags)
 (https://restcountries.com/v3.1/all?fields=flags)
   - This will fetch the `flags` object that includes the  `png`,`svg`,`alt`
   - I will be using the `svg`
 
-[If your API requires an API key, say so here.]
 
 ## 👩‍💻 MVP User Stories & Frontend Routes
 
@@ -49,14 +48,16 @@ If time permits, the following stretch features will be implemented in order of 
 To ensure that we can complete all core features of the application in 1 week, we will aim to complete tasks according to the following timeline:
 
 **Day 1**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+**Complete Proposal**
+- [ ] Chose API - 07/21/24
+- [ ] User Stories created - 07/21/24
+- [ ] Wireframe completed - 07/21/24
 
 **Day 2**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+**Complete Portion**
+- [ ] Get all the countries on the webpage displayed
+- [ ] Update wireframe and proposal
+- [ ] 
 
 **Day 3** (MVP due by the end of the day)
 - [ ] Ticket description and due date
@@ -78,4 +79,4 @@ To ensure that we can complete all core features of the application in 1 week, w
 Below, you can find wireframes for our project. Each wireframe shows a different page of our application as well as the key components of the application. Details such as specific text values or images are intentionally not included:
 
 Wireframe : 
-![WebPage](./img/frameWork.png)
+![WebPage](./img/UpdatedFrameWork.png)
