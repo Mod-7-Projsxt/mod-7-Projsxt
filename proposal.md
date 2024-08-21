@@ -57,22 +57,21 @@ To ensure that we can complete all core features of the application in 1 week, w
 **Complete Portion**
 - [ ] Get all the countries on the webpage displayed
 - [ ] Update wireframe and proposal
-- [ ] 
+- [ ] all 3 fetch calls displayed
 
 **Day 3** (MVP due by the end of the day)
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Link the google maps onto the page
+- [ ] Make the nav bar
+- [ ] Make the light/dark mode
 
 **Day 4**
-- [ ] Ticket description and due date
+- [ ] Continue work if still needed
 - [ ] Ticket description and due date
 - [ ] Ticket description and due date
 
 **Day 5**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] CSS
+- [ ] Finishing touches
 
 ## Wireframes of each page in your application
 
