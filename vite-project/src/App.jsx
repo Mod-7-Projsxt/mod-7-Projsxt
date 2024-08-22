@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import React from 'react';
 import CountryCard from './CountryCard.jsx';
-
+import MyComponent from './myComponents.jsx';
 
 
 function App() {
