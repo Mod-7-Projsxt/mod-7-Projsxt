@@ -5,7 +5,7 @@ import CountriesContext from './context/context';
 import FlagCard from './FlagFetch';
 import {Link} from 'react-router-dom'
 
-function CountryCard() {
+function CountryCard({ countries }) {
 
   const countriesData = useContext(CountriesContext).countriesData
   const flags = useContext(CountriesContext).flagData
@@ -20,7 +20,7 @@ function CountryCard() {
     </div>
     <div title='click me' className="countries" href='{}'>
     {/* {flags.map(flag => (<img src={flag.flags.svg} alt=""/>))  } */}
-      {countriesData?.map(country => ( // if the countriesData is an array
+      {countries?.map(country => ( // if the countriesData is an array
         <div key={country.index} className="country">
           <h2>{country.name.common} {country.flag}</h2>
           <img src={country.flags.svg} alt="" />
