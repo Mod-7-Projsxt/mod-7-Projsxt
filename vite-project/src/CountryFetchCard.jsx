@@ -20,25 +20,28 @@ function CountryCard() {
     </div>
     <div title='click me' className="countries" href='{}'>
     {/* {flags.map(flag => (<img src={flag.flags.svg} alt=""/>))  } */}
-      {countriesData?.map(country => ( // if the countriesData is an array
+      {countriesData?.sort((a, b) => a.name.common.localeCompare(b.name.common)) // alphabetize
+      ?.map(country => ( // if the countriesData is an array, going through the info
         <div key={country.index} className="country">
           <h2>{country.name.common} {country.flag}</h2>
-          <img src={country.flags.svg} alt="" />
-          <p>Capital: {country.capital ? country.capital[0] : 'N/A'}</p>
+          <img className='flag'src={country.flags.svg} alt="" />
+          <nav className='info'>
+          <p>Capital: {country.capital ? country.capital[0] : 'DNE'}</p>
           <p>Region: {country.region}<span></span></p>
-          <p>Population: {country.population}</p>
-          <p>Language(s): {country.languages ? Object.values(country.languages).join(', ') : 'N/A'} </p>
-          <p>
+          {/* searched up how to seperate numbers in jsx */}
+          <p>Population: {country.population.toLocaleString()}</p> 
+          <p>Language(s): {country.languages ? Object.values(country.languages).join(', ') : 'N/A'} </p> 
+          <p>Currency: {country.currencies ? Object.values(country.currencies)
+          .map(currency => `${currency.name} (${currency.symbol})`).join(', ') : 'DNE'}</p>
+          </nav>
+           <p>
               <a
                 href={country.maps.googleMaps}
+                target="_blank"
               >
                 View on Google Maps
               </a>
             </p>
-          <p>Currency: {country.currencies ? Object.values(country.currencies)
-          
-          .map(currency => `${currency.name} (${currency.symbol})`).join(', ') : 'N/A'}</p>
-    
         </div>
       ))}
       
