@@ -4,6 +4,7 @@ import React from 'react';
 import CountryCard from './CountryFetchCard.jsx';
 import CountriesContext from './context/context.jsx';
 import Navbar  from './Filter.jsx';
+import {Link} from 'react-router-dom'
 
 
 
@@ -11,11 +12,15 @@ function App() {
   // const [count, setCount] = useState(0)
 
  return (
-    <>
-    
-      <Navbar/>
-      <CountryCard />
-    </>
+  <>
+  <nav className="navbar">
+  <Link to="/" className="nav-logo">
+  <h1>GeoSphere</h1>
+  </Link>
+  </nav>
+  <Navbar/>
+  <CountryCard />
+  </>
   )
 };
 
