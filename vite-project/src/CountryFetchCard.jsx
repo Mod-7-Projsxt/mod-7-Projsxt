@@ -20,7 +20,8 @@ function CountryCard({ countries }) {
     </div>
     <div title='click me' className="countries" href='{}'>
     {/* {flags.map(flag => (<img src={flag.flags.svg} alt=""/>))  } */}
-      {countries?.map(country => ( // if the countriesData is an array
+      {countries?.sort((a, b) => a.name.common.localeCompare(b.name.common)) // Sorting the countries alphabetically
+      .map(country => ( // if the countriesData is an array
         <div key={country.index} className="country">
           <h2>{country.name.common} {country.flag}</h2>
           <img className='flag'src={country.flags.svg} alt="" />
