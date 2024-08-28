@@ -18,7 +18,6 @@ function App() {
   {/* <h1>GeoSphere</h1> */}
   <img src="/src/images/logo.jpg" alt="" className="logo" />
   </Link>
-  
   </nav>
   <Navbar/>
  
