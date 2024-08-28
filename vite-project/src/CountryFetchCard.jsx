@@ -17,8 +17,6 @@ function CountryCard({ countries }) {
     <>
     <div className='country-cards'>
 
-
-
     <div title='click me' className="countries" href='{}'>
     {/* {flags.map(flag => (<img src={flag.flags.svg} alt=""/>))  } */}
       {countries?.sort((a, b) => a.name.common.localeCompare(b.name.common)) // Sorting the countries alphabetically
@@ -36,7 +34,7 @@ function CountryCard({ countries }) {
           .map(currency => `${currency.name} (${currency.symbol})`).join(', ') : 'DNE'}</p>
           </nav>
 
-              <a href={country.maps.googleMaps} target="_blank" className='mapLink'>
+              <a href={country.maps.googleMaps} className='mapLink'>
                 View on Google Maps
               </a>
         </div>
