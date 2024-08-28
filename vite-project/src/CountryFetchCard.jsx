@@ -15,16 +15,17 @@ function CountryCard({ countries }) {
   
   return (
     <>
-    <div>
-    
-    </div>
+    <div className='country-cards'>
+
+
+
     <div title='click me' className="countries" href='{}'>
     {/* {flags.map(flag => (<img src={flag.flags.svg} alt=""/>))  } */}
       {countries?.sort((a, b) => a.name.common.localeCompare(b.name.common)) // Sorting the countries alphabetically
       .map(country => ( // if the countriesData is an array
-        <div key={country.index} className="country">
-          <h2>{country.name.common} {country.flag}</h2>
+        <div key={country.cca3} className="country">
           <img className='flag'src={country.flags.svg} alt="" />
+          <h2 className='h2'>{country.name.common} {country.flag}</h2>
           <nav className='info'>
           <p>Capital: {country.capital ? country.capital[0] : 'DNE'}</p>
           <p>Region: {country.region}<span></span></p>
@@ -34,17 +35,14 @@ function CountryCard({ countries }) {
           <p>Currency: {country.currencies ? Object.values(country.currencies)
           .map(currency => `${currency.name} (${currency.symbol})`).join(', ') : 'DNE'}</p>
           </nav>
-           <p>
-              <a
-                href={country.maps.googleMaps}
-                target="_blank"
-              >
+
+              <a href={country.maps.googleMaps} target="_blank" className='mapLink'>
                 View on Google Maps
               </a>
-            </p>
         </div>
       ))}
-      
+    </div>
+
     </div>
 
     </>

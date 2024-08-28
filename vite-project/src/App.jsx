@@ -15,10 +15,13 @@ function App() {
   <>
   <nav className="navbar">
   <Link to="/" className="nav-logo">
-  <h1>GeoSphere</h1>
+  {/* <h1>GeoSphere</h1> */}
+  <img src="/src/images/logo.jpg" alt="" className="logo" />
   </Link>
+  
   </nav>
   <Navbar/>
+ 
   <CountryCard />
   </>
   )
