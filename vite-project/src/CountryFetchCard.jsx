@@ -15,6 +15,7 @@ function CountryCard({ countries }) {
   
   return (
     <>
+    <div className='cards'>
     <div className='country-cards'>
 
     <div title='click me' className="countries" href='{}'>
@@ -34,7 +35,7 @@ function CountryCard({ countries }) {
           .map(currency => `${currency.name} (${currency.symbol})`).join(', ') : 'DNE'}</p>
           </nav>
 
-              <a href={country.maps.googleMaps} className='mapLink'>
+              <a href={country.maps.googleMaps} target='_blank' className='mapLink'>
                 View on Google Maps
               </a>
         </div>
@@ -42,7 +43,7 @@ function CountryCard({ countries }) {
     </div>
 
     </div>
-
+    </div>
     </>
   );
 }
